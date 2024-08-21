@@ -3,7 +3,7 @@ FROM python:3.7-alpine
 RUN apk update \
   && apk add --no-cache --virtual .build-deps git g++ postgresql-dev yaml-dev \
   && apk add --no-cache libpq \
-  && git clone https://github.com/llvm/llvm-lnt /var/src/lnt \
+  && git clone https://github.com/antonbaliasnikov/llvm-lnt /var/src/lnt \
   && cd /var/src/lnt && pip3 install -r requirements.server.txt \
   && rm -rf /var/src \
   && apk --purge del .build-deps \

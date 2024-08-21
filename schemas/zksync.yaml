@@ -1,0 +1,24 @@
+# ZKsync benchmarks schema
+format_version: '2'
+name: zksync
+metrics:
+- name: size
+  bigger_is_better: false
+  type: Real
+- name: cycles
+  bigger_is_better: false
+  type: Real
+- name: ergs
+  bigger_is_better: false
+  type: Real
+- name: gas
+  bigger_is_better: false
+  type: Real
+run_fields:
+- name: llvm_project_revision
+  order: true
+machine_fields:
+- name: target
+- name: optimization
+- name: solc_type
+- name: solc_version
